@@ -16,6 +16,7 @@ export interface IDResponse {
 export const ID_PACKAGE_NAME = "id";
 
 export interface IDServiceClient {
+  findOne(arg0: { id: number; }): Observable<FindOneResponse> | PromiseLike<Observable<FindOneResponse>>;
   getId(request: IDRequest): Observable<IDResponse>;
 }
 
